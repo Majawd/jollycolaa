@@ -1,0 +1,2700 @@
+/**
+ * fil: css/style.css
+ **/
+/* Reset: Meyer Style */
+/* fjerner default browser styles */
+@import 'reset.css';
+@import url("https://use.typekit.net/las4hvh.css");
+@import url("https://use.typekit.net/las4hvh.css");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Architects+Daughter&family=Creepster&family=EB+Garamond&family=IM+Fell+English+SC&family=Indie+Flower&family=Monoton&family=Quicksand:wght@700&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Architects+Daughter&family=Creepster&family=EB+Garamond&family=IM+Fell+English+SC&family=Indie+Flower&family=Monoton&family=Montserrat:wght@900&family=Quicksand:wght@700&family=Raleway:wght@100&display=swap');
+
+/* Farve, fontvariabler og font */
+:root {
+
+  /* fonte */
+  --overskrift: 'Montserrat', sans-serif;
+  --broedtekst: 'Raleway', sans-serif;
+
+
+
+
+  /* farver */
+  --background: #e6e0d5;
+  --white1: #fcfaf6;
+  --beige2: #e8decb;
+  --white3: #ae9e79;
+  --grey: #777676;
+  --roed: #d64d4d;
+
+
+
+  /* fonte */
+
+}
+
+#wrap {}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+/* body - Her bruges en variabel: --beige2 */
+body {
+  margin: 0;
+  font-family: var(--broedtekst);
+  background: var(--beige2);
+}
+
+/* header Navigation*/
+header {
+  background: var(--background);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  border-bottom:  1px solid #555;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+
+
+}
+
+nav a:hover {
+  color: #d83b45;
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+
+
+
+/* Wrap */
+#wrap {
+  min-height: 100vh;
+}
+
+/* logo */
+#logomobil{
+  max-width: 100%;
+  width: auto;
+}
+/* footer */
+.container, .container ul, .footer-col, .footer-col h4::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #30302f;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #d83b45;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #d83b45;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* MOBILE FIRST ØVELSER */
+/* 1. Mobile enheder (begynd her) */
+@media only screen and (max-width: 375px) {
+
+/*forside mobil*/
+/*forside det der skal fjernes*/
+  #forsidebillederweb {
+    display: none;
+  }
+
+  #forsidebilledkonkurrence{
+    display: none
+  }
+  #rowsortimentoriginal{
+  display: none;
+  }
+  #sortimentoverskrift{
+    display: none;
+  }
+
+#forsidetrebilleder{
+  display: none;
+}
+
+#forsidevideoweb{
+  display: none;
+  }
+#forsidetekst1{
+  display: none;
+}
+
+#forsidebilledjollycola2{
+  display: none;
+}
+
+#forsidetekst2{
+  display: none;
+}
+#knapperforsideweb{
+  display: none;
+}
+
+
+
+/*forsidevideo mobil*/
+video{
+width: 100%;
+height: auto;
+background-color: #f06b6d;
+
+}
+
+
+
+/* forside tekst 2  mobil*/
+
+
+    #forsidetekst2mobil{
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      padding-top: 10%;
+
+
+
+    }
+#forsidetekst2mobil h2{
+  font-size: 35px;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+
+}
+    #forsidetekst2mobil h3{
+      font-size: 15px;
+    line-height: 2.9;
+    }
+    #forsidetekst2mobil h1{
+      font-size: 30px;
+      padding-bottom: 5%;
+    }
+
+#forsidetekst2mobil p{
+  font-size: 23px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  line-height: 1.9;
+}
+
+.forsidetilmeldknap {
+  color: black;
+  background-color: #d33c3c;
+  font-size: 30px;
+  border: 1.5px solid #555;
+  text-decoration: none;
+}
+
+/* forside   de tre billeder */
+#forsidetrebilledermobil{
+max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+
+.columnforsidetrebilledermobil{
+  max-width: 100%;
+}
+/* forside knapper */
+#forsideknapmobil{
+  background-color: #b09e7c;
+  border: 1px solid #555;
+ padding-top: 10%;
+ text-align: center;
+}
+
+
+
+
+
+
+
+/*forhandlereogsortiment mobil */
+/*forhandlereogsortiment det der skal fjernes */
+#forhandlereogsortiment{
+  display: none;
+}
+#rowsortiment1{
+  display: none;
+}
+#rowsortiment{
+  display: none;
+}
+
+#knapperweb{
+  display: none;
+}
+
+#finddinbutikilandetweb{
+  display: none;
+}
+
+
+#sortimentforhandlerbilledjollycolaweb{
+  display: none;
+
+}
+
+#sortimentforhandlerbilledjollycolaipad{
+  display: none;
+}
+/*forhandlereogsortiment knapperne */
+#sortimentforhandlerknaptilmobil{
+  background-color: #d33c3c;
+  text-align: center;
+}
+
+
+/*forhandlereogsortiment tekst/overskrifter */
+#forhandlereogsortimentmobil h3{
+  text-align: center;
+  font-size: 150%;
+  padding-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+#forhandlereogsortimentmobil h2{
+  text-align: center;
+  font-size: 120%;
+  padding-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+
+#forhandlereogsortimentmobil p{
+  line-height: 30px;
+  text-align: center;
+  font-size: 120%;
+  padding-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+/*forhandlereogsortiment Kort*/
+
+
+#finddinbutikilandetmobil{
+background-color: grey;
+border: 1px solid #555;
+}
+
+
+
+/*forhandlereogsortiment map til at finde jollycola navigation*/
+.finddinbutikmobil input[type=text] {
+  border: 1px solid #555;
+  background-color: #e5e2e2;
+font-size: 100px;
+  font-style: normal;
+
+
+}
+/*forhandlereogsortiment map til at finde jollycola highligths*/
+.finddinbutikbeskrivelsemobil  {
+font-size: 20px;
+  color: #555;
+  line-height: 50px;
+  text-align: center;
+
+
+}
+
+
+/*sortiment */
+/* sortiment det der skal fjernes */
+  #sortimentoverskrift{
+    display: none;
+  }
+
+  #rowsortiment1{
+    display: none;
+  }
+  #rowsortiment2{
+    display: none;
+  }
+#forhandlereteksterweb{
+  display: none;
+}
+
+
+/* det sortiment der er mobil  */
+.rowsortimentmobil1 {
+  display: flex;
+
+}
+.columnsortimentmobil1 {
+  flex: 33.33%;
+  padding: 3px;
+}
+.rowsortimentmobil2 {
+  display: flex;
+
+}
+.columnsortimentmobil2 {
+  flex: 33.33%;
+  padding: 3px;
+}
+.rowsortimentmobil3 {
+  display: flex;
+
+}
+.columnsortimentmobil3 {
+  flex: 33.33%;
+  padding: 3px;
+}
+
+.rowsortimentmobil4 {
+  display: flex;
+
+}
+.columnsortimentmobil4 {
+  flex: 33.33%;
+  padding: 3px;
+}
+
+
+  /* sortiment knapper mobil */
+#knappersortimentmobil{
+
+   background-color: #d33c3c;
+   text-align: center;
+}
+
+#sortimentoverskriftmobil{
+  padding-top: 10%;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+
+
+/* koebjollycolaunderside mobil*/
+/* koebjollycolaunderside, det der skal fjernes */
+#rowkoebjollycola{
+display: none;
+}
+#columrowkoebjollycola{
+display: none;
+}
+
+#koebjollycolaundersideoverskrift{
+  display: none;
+}
+
+/* koebjollycolaunderside tekst mobil */
+#koebjollycolaundersideoverskriftmobil{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#koebjollycolaundersideoverskriftmobil h3{
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.9;
+}
+#koebjollycolaundersideoverskriftmobil h2{
+  text-align: center;
+font-size: 25px;
+}
+
+
+
+
+
+/* om os mobil  */
+
+/* om os  det der skal fjernes  */
+
+#omostekst{
+  display: none;
+}
+#omostekstgron{
+  display:  none;
+}
+
+#omosbilledjollycola{
+  display: none;
+}
+
+#knapperomosweb{
+  display: none;
+}
+
+#omosforsidebilled{
+  display: none;
+}
+#omosbilledjollycola2{
+  display: none;
+}
+
+#omostrebilleder{
+  display: none;
+}
+
+
+/* om os underside  tekst */
+
+#omostekstmobil{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 23%;
+  margin-right: 23%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+
+#omostekstmobil h3{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#omostekstmobil h4, h5, h6{
+font-size: 20px;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+
+
+/* om os underside  de tre billeder */
+#omostrebilledermobil{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* om os tekst grøn */
+
+#omostekstgroenmobil{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 23%;
+  margin-right: 23%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+
+#omostekstgroenmobil h3{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#omostekstgroenmobil h4, h5, h6{
+font-size: 20px;
+padding-top: 5%;
+padding-bottom: 5%;
+text-align: center;
+}
+
+#omosknaptilmobil{
+  background-color: #d33c3c;
+  text-align: center;
+}
+
+
+
+
+/* forhandler  mobil*/
+/* forhandler det der skal fjernes*/
+#forhandleretekstweb{
+  display: none;
+}
+
+#forhandlerbilledjollycola{
+  display: none;
+}
+
+#knapperforhandlerweb{
+  display: none;
+
+}
+#detreforhandlere{
+  display: none;
+}
+
+#forhandlertekstmobil{
+  text-align: center;
+  line-height: 1.5;
+}
+
+#forhandlertekstmobil h3{
+  font-size: 30px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+}
+
+#forhandlertekstmobil h2{
+  font-size: 30px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#forhandlertekstmobil{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+
+#detreforhandleremobil{
+  text-align: center;
+}
+
+#forhandlerknapmobil{
+  text-align: center;
+  background-color: #d33c3c;
+}
+
+
+
+
+/* kontakt mobil*/
+/* kontakt mobil det der skal fjernes*/
+#kontaktformularweb{
+  display: none;
+}
+
+/* padding på de forskellige linjer */
+
+.containerkontaktmobil {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+/* min section og det der skal være INDEN i */
+#kontaktformularmobil input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#kontaktformularmobil input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#kontaktformularmobil hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* overorndet stile til skrift p */
+
+#kontaktformularmobil p{
+  font-size: 20px;
+  padding-bottom: 10px;
+
+}
+/* overorndet stile til skrift h1 */
+#kontaktformularmobil h1{
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+/* knappen og dens farver osv */
+.sendindmobil {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendindmobil:hover {
+  opacity:1;
+
+
+
+
+}
+
+/* konkurrence mobil */
+/* konkurrence mobil det der skal fjernes  */
+#konkurrencetekstformularweb{
+  display: none;
+}
+
+/* konkurrence mobil tekst */
+
+#konkurrencekontaktformularmobil h1{
+  font-size: 30px;
+  padding-top: 10%;
+
+  text-align: center;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+}
+#konkurrencekontaktformularmobil h2{
+  font-size: 25px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.5;
+
+}
+
+#konkurrencekontaktformularmobil h3{
+  font-size: 25px;
+  padding-top: 10%;
+  text-align: center;
+  padding-bottom: 5%;
+}
+  #konkurrencekontaktformularmobil h4{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 5%
+
+}
+
+.containerkonkurrencekontaktweb {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+
+
+/* min section og det der skal være INDEN i */
+#konkurrencekontaktformularweb input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#konkurrencekontaktformularweb input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#konkurrencekontaktformularweb hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+
+
+
+
+}
+/* konkurrence knappen mobil */
+.sendindkonkurrence {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendindkonkurrence:hover {
+  opacity:1;
+
+
+
+
+}
+
+
+
+.footer-col{
+  width: 60%;
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+
+}
+
+
+
+
+/* 2. Tablets mv. (fortsæt her) */
+@media only screen and (max-width: 779px) {
+
+  /*forside ipad*/
+/* forside ipad det der skal fjernes*/
+  #forsidebillederweb {
+    display: none
+  }
+  #forsidevideoweb{
+    display: none;
+    }
+
+    #forsidetrebilleder{
+      display: none;
+    }
+    #knapperforsideweb{
+      display: none;
+    }
+    #forsidetekst1{
+      display: none;
+    }
+
+    #forsidetekst2{
+      display: none;
+    }
+
+    #forsidebilledjollycola2{
+      display: none;
+    }
+/* forside video ipad*/
+    video{
+    width: 100%;
+    height: auto;
+    background-color: #f06b6d;
+
+    }
+
+
+    #forsidetekst2mobil{
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      padding-top: 10%;
+
+
+    }
+#forsidetekst2mobil h2{
+  font-size: 35px;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+}
+    #forsidetekst2mobil h3{
+      font-size: 20px;
+      line-height: 1.5;
+
+
+    }
+    #forsidetekst2mobil h1{
+      font-size: 30px;
+      padding-bottom: 5%;
+      line-height: 1.5;
+
+    }
+
+#forsidetekst2mobil p{
+  font-size: 25px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+line-height: 1.5;
+}
+
+.forsidetilmeldknap {
+  color: black;
+  background-color: #b09e7c;
+  font-size: 25px;
+  border: 1.5px solid #555;
+  text-decoration: none;
+    font-family: var(--overskrift);
+
+
+
+}
+
+/* forside tekst ipad*/
+#forsidetekstmobil{
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.5;
+padding-top: 10%;
+
+}
+
+#forsidetekstmobil h3{
+  font-size: 35px;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+#forsidetekstmobil h2{
+  font-size: 30px;
+}
+
+/* forside underside  de tre billeder */
+#forsidetrebilledermobil{
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+
+
+}
+
+.hundrede{
+max-width:  100%;
+  height: auto;
+}
+
+
+
+#forsideknapmobil{
+  background-color: #d33c3c;
+  border: 1px solid #555;
+ padding-top: 10%;
+ text-align: center;
+}
+
+
+
+
+
+
+  /* forhandlerogsortiment  ipad*/
+
+  /* forhandlerogsortiment   det der skal fjernes  */
+
+
+  #forhandlereogsortimentweb{
+    display: none;
+  }
+  #forhandlereogsortiment{
+    display: none;
+  }
+
+#knapperweb{
+  display: none;
+}
+
+#finddinbutikilandet{
+  display: none;
+}
+
+#forhandlereogsortimentmobil{
+  display: none;
+}
+
+
+#sortimentforhandlerbilledjollycolamobil{
+  display: none;
+}
+#sortimentforhandlerbilledjollycolaweb{
+  display: none;
+}
+
+#finddinbutikilandetweb{
+display: none;
+}
+
+
+/* korttilbutiktil ipad */
+
+
+#finddinbutikilandetmobil{
+background-color: grey;
+border: 1px solid #555;
+}
+
+
+
+/* korttilbutiktil ipad navigation */
+.finddinbutikmobil input[type=text] {
+  border: 1px solid #555;
+  background-color: #e5e2e2;
+font-size: 100px;
+  font-style: normal;
+
+
+}
+
+/* korttilbutiktil ipad navigation */
+.finddinbutikbeskrivelsemobil  {
+font-size: 20px;
+  color: #555;
+  line-height: 50px;
+  text-align: center;
+
+
+}
+  /* forhandlerogsortiment knapper ipad*/
+
+  #sortimentforhandlerknaptilmobil{
+   background-color: #d33c3c;
+   text-align: center;
+  }
+
+
+
+
+
+  /* forhandlerogsortiment tekst ipad*/
+#forhandlereogsortimenttekstipad h3{
+  line-height: 30px;
+  text-align: center;
+  font-size: 180%;
+  padding-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+  }
+  #forhandlereogsortimenttekstipad h2{
+    line-height: 30px;
+    text-align: center;
+    font-size: 150%;
+    padding-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+#forhandlereogsortimenttekstipad p{
+  line-height: 30px;
+  text-align: center;
+  font-size: 140%;
+  padding-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+
+
+
+  /* sortiment  ipad*/
+    /* sortiment det der skal fjernes ipad*/
+#rowsortiment1{
+  display: none;
+}
+#rowsortiment{
+  display: none;
+}
+
+#rowsortiment{
+  display: none;
+}
+#rowsortimentoriginal{
+display: none;
+}
+
+  #sortimentoverskrift{
+    display: none;
+  }
+
+  #rowsortiment1{
+    display: none;
+  }
+  #rowsortiment2{
+    display: none;
+  }
+  #forsidebilledjollycola{
+    display: none;
+  }
+  #knappersortimentweb{
+    display: none;
+  }
+
+
+
+  /* sortiment tekst ipad*/
+
+#sortimentoverskriftmobil h3{
+  font-size: 25px;
+  text-align: center;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+
+#sortimentoverskriftmobil h2{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+  /* sortiment knapper ipad*/
+#knappersortimentmobil{
+
+   background-color: #d33c3c;
+   text-align: center;
+}
+
+
+
+
+/* koebjollycolaunderside ipad*/
+/* koebjollycolaunderside, det der skal fjernes */
+#rowkoebjollycola{
+display: none;
+}
+#columrowkoebjollycola{
+display: none;
+}
+
+#koebjollycolaundersideoverskrift{
+  display: none;
+}
+#knapperkoebweb{
+  display: none;
+}
+/* koebjollycolaunderside tekst mobil */
+#koebjollycolaundersideoverskriftmobil{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#koebjollycolaundersideoverskriftmobil h3{
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.9;
+}
+#koebjollycolaundersideoverskriftmobil h2{
+  text-align: center;
+font-size: 25px;
+}
+
+
+#koebknapmobil{
+  display: flex;
+  background-color: #d33c3c;
+  text-align: center;
+}
+
+
+
+/* om os  ipad  */
+/* om os underside  det der skal fjernes  */
+
+#omostekstweb{
+  display: none;
+}
+#omostekstgroen{
+  display:  none;
+}
+
+#omosbilledjollycola{
+  display: none;
+}
+
+
+#columnknapomosmobil{
+  display: none;
+ }
+
+#omosforsidebilled{
+  display: none;
+}
+#omosbilledjollycola2{
+  display: none;
+}
+
+
+#omostrebilleder{
+  display: none;
+}
+
+#knapperomosweb{
+  display: none;
+}
+
+
+
+/* om os  tekst ipad */
+
+#omostekstmobil{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 23%;
+  margin-right: 23%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+
+#omostekstmobil h3{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#omostekstmobil h4, h5, h6{
+font-size: 20px;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+
+
+/* om os ipad  de tre billeder */
+#omostrebilledermobil{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* om os ipad tekst grøn */
+
+#omostekstgroenmobil{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 23%;
+  margin-right: 23%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+
+#omostekstgroenmobil h3{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#omostekstgroenmobil h4, h5, h6{
+font-size: 20px;
+padding-top: 5%;
+padding-bottom: 5%;
+text-align: center;
+}
+
+
+#omosknaptilmobil{
+  background-color: #d33c3c;
+text-align: center;
+}
+
+/* forhandler  ipad  */
+/* forhandler det der skal fjernes*/
+#forhandlereteksterweb{
+  display: none;
+}
+
+#forhandlerbilledjollycola{
+  display: none;
+}
+
+#knapperforhandlerweb{
+  display: none;
+
+}
+#detreforhandlere{
+  display: none;
+}
+
+
+
+#forhandlertekstmobil{
+  text-align: center;
+  line-height: 1.5;
+}
+
+#forhandlertekstmobil h3{
+  font-size: 30px;
+  padding-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+}
+
+#forhandlertekstmobil h2{
+  font-size: 30px;
+
+  padding-bottom: 5%;
+}
+
+#forhandlertekstmobil{
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#detreforhandleremobil{
+  text-align: center;
+}
+
+#forhandlerknapmobil{
+  text-align: center;
+  background-color: #d33c3c;
+}
+
+
+
+/* kontakt ipad */
+/*  kontakt ipad det der skal fjernes*/
+#kontaktformularweb{
+  display: none;
+}
+
+#kontakttekstweb{
+  display: none;
+}
+
+
+
+/* kontakt tekst ipad */
+
+#kontakttekstmobil{
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+#kontakttekstmobil h3{
+  font-size: 30px;
+  padding-bottom: 10%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#kontakttekstmobil h2{
+  font-size: 25px;
+  padding-bottom: 10%;
+}
+
+#kontakttekstmobil h4{
+  font-size: 26px;
+  padding-bottom: 5%;
+}
+
+
+#kontakttekstmobil p{
+  font-size: 25px;
+}
+/* kontakt : kontakt formular */
+/* rettelelser ved kontakt formular */
+/* padding på de forskellige linjer */
+
+
+.containerkontaktmobil {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+/* min section og det der skal være INDEN i */
+#kontaktformularmobil input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#kontaktformularmobil input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#kontaktformularmobil hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* overorndet stile til skrift p */
+
+#kontaktformularmobil p{
+  font-size: 20px;
+  padding-bottom: 10px;
+
+}
+/* overorndet stile til skrift h1 */
+#kontaktformularmobil h1{
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+/* knappen og dens farver osv */
+.sendindmobil {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendindmobil:hover {
+  opacity:1;
+
+}
+
+
+
+
+
+
+
+/* konkurrence  ipad */
+/* konkurrence ipad det der skal fjernes  */
+#konkurrencetekstformularweb{
+  display: none;
+}
+
+/* konkurrence tekst ipad*/
+
+#konkurrencekontaktformularmobil h1{
+  font-size: 30px;
+  padding-top: 10%;
+
+  text-align: center;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+}
+#konkurrencekontaktformularmobil h2{
+  font-size: 25px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.5;
+
+}
+
+#konkurrencekontaktformularmobil h3{
+  font-size: 25px;
+  padding-top: 10%;
+  text-align: center;
+  padding-bottom: 5%;
+}
+  #konkurrencekontaktformularmobil h4{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 5%
+
+}
+
+.containerkonkurrencekontaktweb {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+
+
+/* min section og det der skal være INDEN i */
+#konkurrencekontaktformularweb input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#konkurrencekontaktformularweb input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#konkurrencekontaktformularweb hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+
+
+
+
+}
+/* knappen og dens farver osv */
+.sendindkonkurrence {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendindkonkurrence:hover {
+  opacity:1;
+
+
+
+
+}
+
+}
+
+/* 3. Stor skærm (slut her) */
+@media only screen and (min-width: 780px) {
+
+/* 3. Stor skærm HEADER */
+  .nav-toggle-label {
+    display: none;
+  }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav li {
+  text-align: center;
+      margin-bottom: 0;
+      padding-top: 10%;
+
+    }
+
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background: black;
+      position: absolute;
+      top: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 400ms;
+    }
+
+    nav a:hover::before {
+      transform: scale(1, 1);
+    }
+
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  /* forside web */
+  /* forside web det der skal fjernes fra web */
+  #forsidevideomobil{
+    display: none;
+    }
+
+    #forsidebilledermobil{
+      display: none;
+
+    }
+    #forsidebillederweb{
+      display: none;
+    }
+
+#forsideknapmobil{
+  display: none;
+}
+#forsidetekstmobil{
+  display: none;
+}
+#forsidetekstmobil2{
+  display: none;
+}
+
+#forsidebilledermobil{
+  display: none;
+
+
+}
+#forsidebilledjollycolamobil2{
+  display: none;
+}
+
+#forsidetilmeldknap{
+  display: none;
+}
+
+#forsidetekst2mobil{
+  display: none;
+}
+  /* forside video web */
+  video {
+  background-color: #f06b6d;
+
+  }
+
+  #forsidevideoweb video {
+    position: relative;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  }
+
+
+
+
+
+
+/* Forside tekst web */
+#forsidetekst2 {
+  background-color: var(--beige2);
+  line-height: 1.5;
+padding-top: 5%;
+}
+
+
+
+#forsidetekst2 h3 {
+  text-align: center;
+  font-size: 22px;
+  line-height: 2;
+
+
+}
+
+#forsidetekst2 h2
+{
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  padding-bottom: 3%;
+
+}
+#forsidetekst2 p{
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top:  5%;
+  padding-bottom: 5%;
+  line-height: 2;
+
+}
+
+
+#forsidetekst2 h1{
+  font-size: 60px;
+  text-align: center;
+    font-family: var(--overskrift);
+    color: #b09e7c;
+}
+
+#forsidetekst2 p{
+  column-count: 2;
+}
+
+
+
+
+
+  /* forside konkurrenceknap web */
+.forsidetilmeldknapweb {
+  color: black;
+  background-color: #b09e7c;
+  font-size: 40px;
+  border: 1.5px solid #555;
+  text-decoration: none;
+
+
+}
+
+  /* forside billed web */
+#forsidebilledjollycola{
+  padding-top: 5%;
+}
+
+/* Forside tekst 1 web*/
+#forsidetekst1 {
+  background-color: var(--beige2);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
+
+
+
+#forsidetekst1 h3 {
+  text-align: center;
+  font-size: 35px;
+  font-family: var(--overskrift);
+  color: #b09e7c;
+
+
+}
+
+#forsidetekst1 h2
+{
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  margin-top: auto;
+  padding-bottom: 5%;
+
+
+
+
+}
+/* forside her ser man 3 billeder web */
+
+
+#forsidetrebilleder{
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+   display: flex;
+   width: 100%;
+   height: auto;
+   max-width: 100%;
+}
+  .forsidetrebilleder {
+    display: flex;
+  }
+    .columnforsidetrebilleder {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+
+
+
+
+  nav {
+    all: unset;
+    grid-column: 2 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+  }
+
+  /* forside billedboks med konkurrence web  */
+  .rowweb {
+    display: flex;
+    text-align: center;
+    width: 100%;
+padding-top: 5%;
+  }
+
+  .columnweb {
+    flex: 33.33%;
+    padding: 3px;
+  }
+
+
+
+
+
+
+  /* forside knapper  web */
+  #knapperforsideweb {
+    max-width: 100%;
+   background-color: #d33c3c;
+   border: 1px solid #555;
+  }
+  .knapperforsideweb {
+    display: flex;
+    text-align: center;
+  }
+
+  .columnknapforsideweb{
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+
+  /* forhandlereogsortiment web */
+      /* forhandlereogsortiment web det der skal fjernes */
+
+
+#forhandlereogsortimenttekstipad{
+        display: none;
+      }
+
+   #forhandlereogsortimentmobil{
+        display: none;
+      }
+  #forhandlereogsortimentipad {
+    display: none;
+
+    }
+
+#sortimentforhandlerknaptilmobil{
+  display: none;
+}
+
+#finddinbutikbeskrivelsemobil{
+  display: none;
+}
+
+#sortimentforhandlerknapmobil{
+  display: none;
+}
+
+#sortimentforhandlerbilledjollycolaipad{
+  display: none;
+}
+
+#sortimentforhandlerbilledjollycolamobil{
+  display: none;
+}
+
+
+  /* sortimentforhandlere map web */
+  #finddinbutikilandet{
+  background-color: grey;
+  border: 1px solid #555;
+  }
+
+  .finddinbutik1 {
+  display: flex;
+
+}
+
+
+/* Style the search box inside the navigation bar */
+.finddinbutik2 input[type=text] {
+  border: 1px solid #555;
+  background-color: #e5e2e2;
+  font-size: 30px;
+  font-style: normal;
+
+
+}
+
+/* Style the "active" element to highlight the current page */
+.finddinbutikbeskrivelse  {
+  font-size: 35px;
+  color: #555;
+  padding-top: 10%;
+  line-height: 100px;
+
+
+}
+
+
+  /* sortimentforhandlere tekst web */
+
+#forhandlereogsortiment h3{
+  text-align: center;
+  padding-top: 5%;
+  margin-left: 23%;
+  margin-right: 23%;
+  font-size: 30px;
+  font-family: var(--overskrift);
+  color: #b09e7c;
+  line-height: 1.5;
+}
+#forhandlereogsortiment h2{
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 25px;
+  line-height: 1.9;
+}
+
+#forhandlereogsortiment{
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 20px;
+}
+  /* denne opdeler teksten i to colonner */
+
+.forsidetekst1{
+  column-count: 2;
+}
+  /* sortiment og forhandlere knapper nederst på siden  */
+  #knapperweb {
+   background-color: #d33c3c;
+   border: 1px solid #555;
+  }
+  .knapperweb {
+    display: flex;
+    text-align: center;
+  }
+
+  .columnknapweb {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+
+
+  /* sortiment  web */
+  /* sortiment  web  det der skal fjernes */
+
+
+#rowsortimentmobil{
+  display: none;
+}
+
+#rowsortimentmobil1{
+  display: none;
+}
+#rowsortimentmobil2{
+  display: none;
+}
+
+#rowsortimentmobil3{
+  display: none;
+}
+
+#rowsortimentmobil4{
+  display: none;
+}
+#finddinbutikilandetmobil{
+  display: none;
+}
+
+#knapperforsidemobil{
+  display: none;
+}
+
+
+
+#forsidebilledjollycolamobil{
+  display: none;
+}
+#sortimentoverskriftmobil{
+  display: none;
+}
+
+#knappersortimentmobil{
+  display: none;
+}
+  /* sortiment tekst web*/
+
+
+#sortimentoverskrift{
+  line-height: 1.5;
+}
+
+  #sortimentoverskrift h3{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 5%;
+    font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+  }
+  #sortimentoverskrift h2{
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 10%;
+
+  }
+
+    /* sortiment sortiment i kolonner  web*/
+  .rowsortiment1 {
+    display: flex;
+  }
+
+
+  .columsortiment {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+
+  .columsortiment1 {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+
+  .rowsortiment2 {
+    display: flex;
+  }
+
+
+  .columsortiment2 {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+  /* sortiment knapper  web*/
+
+    .knappersortimentweb{
+      display: flex;
+      background-color: #d33c3c;
+      text-align: center;
+      width: 100%;
+    }
+
+    .columnsortimentweb{
+      flex: 33.33%;
+      padding: 0;
+    }
+
+
+
+
+
+
+
+  /* koebjollycola  web*/
+    /*   /* koebjollycola  web det der skal fjernes */
+  #rowkoebjollycolamobil{
+    display: none;
+  }
+  #columrowkoebjollycolamobil{
+    display: none;
+  }
+  #koebjollycolaundersideoverskriftmobil{
+    display: none;
+  }
+  #forsidebilledjollycolaweb{
+    display: none;
+  }
+  #koebknapmobil{
+    display: none;
+  }
+
+
+  /* koebjollycola billed web*/
+#rowkoebjollycola{
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+   display: flex;
+}
+  .rowkoebjollycola {
+    display: flex;
+  }
+  /* koebjollycola 2 billeder kolonne */
+  .columrowkoebjollycola {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+  /* koebjollycola tekst  web*/
+#koebjollycolaundersideoverskrift{
+  text-align: center;
+
+  line-height: 1.5;
+
+}
+#koebjollycolaundersideoverskrift h3{
+  font-size: 35px;
+  padding-top: 5%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+}
+
+#koebjollycolaundersideoverskrift h2{
+  font-size: 35px;
+}
+
+
+
+  /* koebjollycola knapper web*/
+#knapperkoebweb {
+ background-color: #d33c3c;
+ border: 1px solid #555;
+}
+.knapperkoebweb {
+  display: flex;
+  text-align: center;
+}
+
+.columnknapkoebweb{
+  flex: 33.33%;
+  padding: 0px;
+}
+
+
+
+
+
+  /* konkurrence web*/
+  /* konkurrenceweb skal mobil og ipad fjernes  */
+#konkurrencekontaktformularmobil{
+  display: none;
+}
+
+#konkurrencetekstformularmobil
+  /* konkurrence underside billed  */
+
+#konkurrencebilled{
+  text-align: center;
+}
+
+ #forsidevideomobil{
+   display: none;
+ }
+
+
+
+
+/* konkurrence tekst web */
+
+#konkurrencetekstformularweb h1{
+  font-size: 35px;
+  padding-top: 5%;
+  text-align: center;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    }
+#konkurrencetekstformularweb h2{
+  font-size: 30px;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+
+
+}
+
+#konkurrencetekstformularweb h3{
+  font-size: 30px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #b09e7c;
+
+
+}
+
+#konkurrencetekstformularweb h4{
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5;
+
+
+
+}
+
+
+  /* konkurrence formular web*/
+.containerkonkurrencekontaktweb {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+
+
+/* min section og det der skal være INDEN i */
+#konkurrencekontaktformularweb input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#konkurrencekontaktformularweb input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#konkurrencekontaktformularweb hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+
+
+
+
+}
+/* knappen og dens farver osv */
+.sendindkonkurrence {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendindkonkurrence:hover {
+  opacity:1;
+
+
+
+
+}
+
+
+
+
+  /* omos web*/
+/* om os web det der skal fjernes  */
+
+#omostekstmobil{
+  display: none;
+}
+
+#omosbilledjollycolamobil{
+  display: none;
+}
+
+#omosknaptilmobil{
+  display: none;
+}
+
+#knapperomosipad{
+  display: none;
+}
+
+#omosforsidebilledermobil{
+  display: none;
+}
+
+
+#omostrebilledermobil{
+  display: none;
+}
+
+#omostekstgroenmobil{
+  display: none;
+}
+
+
+#omosbilledjollycolamobil{
+  display: none;
+}
+#omosbilledjollycolamobil2{
+  display: none;
+}
+
+  /* omos tekst web*/
+#omostekstweb{
+  text-align: center;
+margin-left: 23%;
+margin-right: 23%;
+line-height: 1.8;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+#omostekstweb h1{
+  text-align: center;
+  font-size: 35px;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#omostekstweb h3{
+  font-size: 25px;
+  padding-bottom: 5%;
+
+}
+
+
+#omostekstweb h2, h4, h5, h6{
+  font-size: 20px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+
+}
+
+#omostekstweb p{
+  font-size: 20px;
+
+}
+
+
+.omostekstweb1{
+  column-count: 2;
+}
+
+
+
+
+
+  /* omos 3 billeder web*/
+
+
+#omostrebilleder{
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+   display: flex;
+   width: 100%;
+   height: auto;
+}
+  .omostrebilleder {
+    display: flex;
+  }
+    .columnomostrebilleder {
+    flex: 33.33%;
+    padding: 0px;
+  }
+
+  /* omos tekst web*/
+#omostekstgroen{
+    text-align: center;
+  margin-left: 23%;
+  margin-right: 23%;
+  line-height: 1.8;
+  padding-bottom: 5%;
+  }
+
+  #omostekstgroen h3{
+    font-size: 35px;
+    padding-bottom: 5%;
+    font-family: var(--overskrift);
+      color: #b09e7c;
+      line-height: 1.5;
+  }
+
+
+  #omostekstgroen h2, h4, h5, h6{
+    font-size: 20px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+  }
+
+  #omostekstgroen p{
+    font-size: 20px;
+
+  }
+
+  /* omos artikel kolonner web*/
+  .omostekst1groen{
+    column-count: 2;
+  }
+
+
+  /* omos knapper web*/
+
+  .knapperomosweb{
+    display: flex;
+    background-color: #d33c3c;
+    text-align: center;
+    width: 100%;
+  }
+
+  .columnknapomosweb{
+    flex: 33.33%;
+    padding: 0;
+  }
+
+
+  /* forhandler web   */
+/* forhandler web det der skal fjernes  */
+
+#forhandlertekstmobil{
+  display: none;
+}
+
+#forhandlerbilledjollycolamobil{
+  display: none;
+
+}
+
+#forhandlerknapmobil{
+  display: none;
+}
+
+#detreforhandleremobil{
+  display: none;
+}
+
+
+/* forhandler de trebutikker på linje web */
+
+
+
+#detreforhandlere{
+  text-align: center;
+
+
+}
+.detreforhandlere{
+  display: flex;
+  border: 1.5px solid #555;
+}
+
+.columndetreforhandlere{
+  flex: 33.33%;
+  padding: 0;
+}
+/* forhandler underside  knapper på linje */
+
+.knapperforhandlerweb{
+  display: flex;
+  background-color: #d33c3c;
+}
+
+.columnknapforhandlerweb{
+  flex: 33.33%;
+  padding: 0;
+}
+
+
+  /* forhandler tekst web   */
+#forhandlereteksterweb{
+  text-align: center;
+margin-left: 23%;
+margin-right: 23%;
+line-height: 1.5;
+padding-top: 5%;
+}
+
+#forhandlereteksterweb h3{
+  font-size: 30px;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+
+}
+
+
+#forhandlereteksterweb h2{
+  font-size: 25px;
+    padding-bottom: 5%;
+
+}
+
+#forhandlereteksterweb p{
+  font-size: 20px;
+
+}
+
+.forhandlertekstweb{
+  column-count: 2;
+}
+
+
+  /* forhandler knapper web   */
+
+
+#knapperforhandlerweb {
+ background-color: #d33c3c;
+ border: 1px solid #555;
+}
+.knapperforhandlerweb {
+  display: flex;
+  text-align: center;
+}
+
+.columnknapforhandlerweb{
+  flex: 33.33%;
+  padding: 0px;
+}
+
+
+
+/* kontakt web: */
+/* kontakt web det der skal fjernes */
+#kontaktformularmobil{
+  display: none;
+}
+#kontakttekstmobil{
+  display: none;
+}
+/* undersiden kontakt tekst */
+
+#kontakttekstweb{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+#kontakttekstweb h3{
+  font-size: 35px;
+  padding-bottom: 5%;
+  font-family: var(--overskrift);
+    color: #b09e7c;
+    line-height: 1.5;
+}
+
+#kontakttekstweb h2{
+  font-size: 30px;
+
+}
+
+#kontakttekstweb h4{
+  font-size: 30px;
+  padding-bottom: 5%;
+}
+
+
+#kontakttekstweb p{
+  font-size: 25px;
+}
+/* kontakt formular web: */
+
+/* padding på de forskellige linjer */
+
+.containerkontaktweb {
+  padding: 16px;
+  background-color: #d46a6c;
+  border: 1.5px solid #555;
+
+}
+
+/* min section og det der skal være INDEN i */
+#kontaktformularweb input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1.5px solid #555;
+  background: #f1f1f1;
+}
+
+#kontaktformularweb input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* overorndet stile til de forskellige hr, */
+#kontaktformularweb hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* overorndet stile til skrift p */
+
+#kontaktformularweb p{
+  font-size: 20px;
+  padding-bottom: 10px;
+
+}
+/* overorndet stile til skrift h1 */
+#kontaktformularweb h1{
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+/* knappen og dens farver osv */
+.sendind {
+  background-color: #d33c3c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 1.5px solid #555;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+/* knappen og dens farver OG lille ændring når man holder over den  */
+.sendind:hover {
+  opacity:1;
+
+
+
+
+}
+
+
+}
